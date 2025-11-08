@@ -56,7 +56,7 @@ const Footer = () => {
       </section>
       <div className="text-center p-4" style={{ backgroundColor: "rgba(0,0,0,0.05)" }}>
         © 2025 Copyright:
-        <a className="text-reset fw-bold" href="https://example.com/"> YourWebsite.com</a>
+        <a className="text-reset fw-bold" href="https://example.com/"> Website.com</a>
       </div>
     </footer>
   );
