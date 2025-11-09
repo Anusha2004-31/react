@@ -1,59 +1,40 @@
 
-import { useState } from "react";
-
-const UserForm = ({ setUser }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setUser({ name, email, phone });
-    setName("");
-    setEmail("");
-    setPhone("");
-  };
-
+const UserForm = () => {
   return (
-    <div className="container mt-4">
-      <h2>Enter Your Info</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label className="form-label">Name</label>
-          <input 
-            type="text" 
-            className="form-control" 
-            value={name} 
-            onChange={(e) => setName(e.target.value)} 
-            required
-          />
-        </div>
+    <section
+      className="vh-100"
+      style={{ backgroundColor: "#eee" }}
+    >
+      <div className="container h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-lg-12 col-xl-11">
+            <div className="card text-black" style={{ borderRadius: "25px" }}>
+              <div className="card-body p-md-5">
+                <div className="row justify-content-center">
+                  <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center flex-column">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                      className="img-fluid mb-4"
+                      alt="Signup illustration"
+                    />
 
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input 
-            type="email" 
-            className="form-control" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required
-          />
-        </div>
+                    <div className="d-flex gap-3">
+                      <a href="/" className="btn btn-primary btn-lg">
+                        Sign Up
+                      </a>
+                      <a href="/login" className="btn btn-success btn-lg">
+                        Login
+                      </a>
+                    </div>
+                  </div>
 
-        <div className="mb-3">
-          <label className="form-label">Phone</label>
-          <input 
-            type="tel" 
-            className="form-control" 
-            value={phone} 
-            onChange={(e) => setPhone(e.target.value)} 
-            required
-          />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-    </div>
+      </div>
+    </section>
   );
 };
 
