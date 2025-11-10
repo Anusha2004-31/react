@@ -1,35 +1,52 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Carousel = () => {
+const Header = ({ cartItems }) => {
   return (
-    <div className="mt-5 pt-5">
-      <div>
-        <img 
-          src="https://images.unsplash.com/photo-1600058644245-ede8d11f6522?auto=format&fit=crop&q=60&w=1200" 
-          className="d-block w-100 mb-3" 
-          alt="Image 1"
-          style={{ height: "1200px", objectFit: "cover" }} 
-        />
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
+        <Link className="navbar-brand fw-bold" to="/">
+          MyStore
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/products">
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/cart">
+                Cart ({cartItems.length})
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/userform">
+                Login / Signup
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <img 
-          src="https://images.unsplash.com/photo-1686071211629-91ac9906e878?auto=format&fit=crop&q=60&w=1200" 
-          className="d-block w-100 mb-3" 
-          alt="Image 2"
-          style={{ height: "1000px", objectFit: "cover" }} 
-        />
-      </div>
-      <div>
-        <img 
-          src="https://images.unsplash.com/photo-1686071247990-d5b534d5b7e9?auto=format&fit=crop&q=80&w=1200" 
-          className="d-block w-100 mb-3" 
-          alt="Image 3"
-          style={{ height: "700px", objectFit: "cover" }} 
-        />
-      </div>
-
-    </div>
+    </nav>
   );
 };
 
-export default Carousel;
+export default Header;

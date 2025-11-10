@@ -1,5 +1,4 @@
 
-// Cart.jsx
 const Cart = ({ cartItems }) => {
   return (
     <div className="container mt-4">

@@ -1,7 +1,13 @@
+import React from "react";
+import Carousel from "../components/Carousel"; // adjust path if needed
 
 const Home = () => {
   return (
     <>
+      {/* Carousel Section */}
+      <Carousel />
+
+      {/* Hero Section */}
       <section className="text-center container mt-5">
         <div className="row py-5">
           <div className="col-lg-6 col-md-8 mx-auto">
@@ -16,6 +22,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Products Section */}
       <div className="py-5 bg-light">
         <div className="container">
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
@@ -25,7 +33,7 @@ const Home = () => {
                   <h5 className="text-center mb-2">Thumbnail</h5>
                   <div className="card-body text-center flex-grow-1">
                     <p className="card-text">
-                      This is a clean, stylish card with supporting text.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi deleniti veniam unde enim sed nobis, quidem sit fuga incidunt reprehenderit, recusandae repudiandae eum, iste hic consectetur ducimus ea sunt voluptates!
                     </p>
                   </div>
                   <div className="card-footer bg-dark border-0 d-flex justify-content-center gap-2">
