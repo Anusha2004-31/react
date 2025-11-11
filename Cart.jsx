@@ -1,8 +1,9 @@
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems = [] }) => {
   return (
     <div className="container mt-4">
       <h2>Cart</h2>
+
       {cartItems.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
