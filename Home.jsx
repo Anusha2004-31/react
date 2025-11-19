@@ -1,9 +1,39 @@
-import React from "react";
-import Carousel from "../components/Carousel"; // adjust path if needed
+
+import React, { useEffect, useState } from "react";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
+  // 🌙 Theme Toggle Hook Code (inside home page)
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem("theme-mode") || "light";
+  });
+
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme-mode", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
     <>
+      {/* 🌙 Floating Theme Toggle Button */}
+      <button
+        onClick={toggleTheme}
+        className="btn btn-outline-primary position-fixed top-0 end-0 m-3"
+        style={{
+          borderRadius: "50%",
+          width: "45px",
+          height: "45px",
+          zIndex: 2000,
+          fontSize: "18px",
+        }}
+      >
+        {theme === "light" ? "🌙" : "☀️"}
+      </button>
+
       {/* Carousel Section */}
       <Carousel />
 
@@ -33,7 +63,8 @@ const Home = () => {
                   <h5 className="text-center mb-2">Thumbnail</h5>
                   <div className="card-body text-center flex-grow-1">
                     <p className="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi deleniti veniam unde enim sed nobis, quidem sit fuga incidunt reprehenderit, recusandae repudiandae eum, iste hic consectetur ducimus ea sunt voluptates!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Excepturi deleniti veniam unde enim sed nobis.
                     </p>
                   </div>
                   <div className="card-footer bg-dark border-0 d-flex justify-content-center gap-2">
