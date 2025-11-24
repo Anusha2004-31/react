@@ -1,5 +1,5 @@
 /* toggle */
-/* body.light {
+body.light {
   background-color: white;
   color: black;
 }
@@ -7,10 +7,10 @@
 body.dark {
   background-color: #111;
   color: white;
-} */
+}
 
-
-/* .container {
+/* Container for the bubbles */
+.container {
   width: 100vw;
   height: 100vh;
   background: palegreen;
@@ -39,7 +39,9 @@ body.dark {
     transform: translate(-50%, -50%) scale(0.2);
     opacity: 0;
   }
-} */
+}
+
+
 /* banner  */
 
 /* .sale-banner-container {
@@ -92,10 +94,9 @@ body.dark {
   color: #ddd;
 } */
 */
-
-/* video play and pause  */
-*/ .video-container {
-  text-align: center;
+/* video play and pause  
+/* * .video-container {
+  /* text-align: center;
   margin-top: 30px;
 }
 
@@ -111,5 +112,5 @@ body.dark {
 }
 
 .video-btn:hover {
-  background: #555;
-}
+  background: #555; */
+/* } 

@@ -79,48 +79,48 @@
 // move cursor to see bubbools
 
 
-// import { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 
-// export default function App() {
-//     const containerRef = useRef(null);
+export default function App() {
+    const containerRef = useRef(null);
 
-//     useEffect(() => {
-//         const container = containerRef.current;
+    useEffect(() => {
+        const container = containerRef.current;
 
-//         const handleMove = (e) => {
-//             const bubble = document.createElement("div");
-//             bubble.className = "bubble";
+        const handleMove = (e) => {
+            const bubble = document.createElement("div");
+            bubble.className = "bubble";
 
-//             bubble.style.left = `${e.clientX}px`;
-//             bubble.style.top = `${e.clientY}px`;
+            bubble.style.left = `${e.clientX}px`;
+            bubble.style.top = `${e.clientY}px`;
 
-//             container.appendChild(bubble);
-//             setTimeout(() => bubble.remove(), 500);
-//         };
+            container.appendChild(bubble);
+            setTimeout(() => bubble.remove(), 500);
+        };
 
-//         container.addEventListener("mousemove", handleMove);
-//         return () => {
-//             container.removeEventListener("mousemove", handleMove);
-//         };
-//     }, []);
+        container.addEventListener("mousemove", handleMove);
+        return () => {
+            container.removeEventListener("mousemove", handleMove);
+        };
+    }, []);
 
-//     return (
-//         <div ref={containerRef} className="container">
-//             <h2>Move your cursor to see small bubbles</h2>
-//         </div>
-//     );
-// }
-// video play and pause
-
-import React from "react";
-import Player from "./Player";
-
-function App() {
     return (
-        <div>
-            <Player />
+        <div ref={containerRef} className="container">
+            <h2>Move your cursor to see small bubbles</h2>
         </div>
     );
 }
+// video play and pause
 
-export default App;
+// import React from "react";
+// import Player from "./Player";
+
+// function App() {
+//     return (
+//         <div>
+//             <Player />
+//         </div>
+//     );
+// }
+
+// export default App;
