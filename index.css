@@ -1,4 +1,5 @@
-body.light {
+/* toggle */
+/* body.light {
   background-color: white;
   color: black;
 }
@@ -6,4 +7,108 @@ body.light {
 body.dark {
   background-color: #111;
   color: white;
+} */
+
+
+/* .container {
+  width: 100vw;
+  height: 100vh;
+  background: palegreen;
+  overflow: hidden;
+  position: relative;
 }
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  background: palevioletred;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: fade 0.5s linear forwards;
+}
+
+@keyframes fade {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+} */
+/* banner  */
+
+.sale-banner-container {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.big-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Fixes width issue */
+}
+
+.left-top-sale-box {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 25px 30px;
+  border-radius: 12px;
+  color: white;
+  width: 450px;
+}
+
+.countdown-box {
+  display: flex;
+  gap: 80px;
+  margin-top: -10px;
+  width: 40%;
+}
+
+.time-item {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 0;
+  border-radius: 8px;
+  width: 75px;
+  text-align: center;
+}
+
+.time-number {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.time-label {
+  font-size: 12px;
+  color: #ddd;
+}
+
+/* video play and pause  */
+/* .video-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.video-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+}
+
+.video-btn:hover {
+  background: #555;
+} */
